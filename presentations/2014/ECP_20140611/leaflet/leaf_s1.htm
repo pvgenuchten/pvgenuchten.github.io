@@ -1,0 +1,22 @@
+
+<html>
+
+<head>
+	<title>Leaflet stap 1</title>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+</head>
+	
+
+	<body>
+	<div id="map" style="width:500px;height:300px">
+	
+	<script>
+	//initialiseer de kaart ergens rond nieuwegein
+	var map = L.map('map').setView([52, 5], 10);
+	//gebruik hier je eigen tile provider (mapbox,mapquest,pdok,...)
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+	</script>
+	</body>
+
+</html>

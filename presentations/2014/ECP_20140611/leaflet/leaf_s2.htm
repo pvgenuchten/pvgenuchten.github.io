@@ -1,0 +1,24 @@
+
+<html>
+
+<head>
+	<title>Leaflet stap 2</title>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+</head>
+	
+
+	<body>
+	<div id="map" style="width:500px;height:300px">
+	
+	<script>
+	var map = L.map('map').setView([52, 5], 12);
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+	//voeg een wms laag toe, kopieer de wms-link bijvoorbeeld uit nationaalgeoregister.nl
+	//welke lagen beschikbaar zijn in een wms vraag je op met http://{wms}?request=getcapabilities, gebruik de inhoud van <layer><name/></layer>
+	//let op dat de betreffende wms de projectie van de tilelayer dient te ondersteunen (bing/osm/google is spherical mercator epsg:3857/epsg:900913)
+	L.tileLayer.wms("http://geozet.koop.overheid.nl/wms", {layers: 'geozet:bekendmakingen_punt',format: 'image/png',transparent: true}).addTo(map);
+	</script>
+	</body>
+
+</html>
