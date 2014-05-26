@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 
 	<head>
 		<meta charset="utf-8">
 
 		<title>ECP Open Data event 11 june 2014</title>
 
-		<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.6.2/css/reveal.min.css">
+		<link rel="stylesheet"  ref="//cdn.jsdelivr.net/reveal.js/2.6.2/css/reveal.min.css">
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.6.2/css/theme/default.css" id="theme">
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.6.2/css/theme/serif.css" id="theme">
 		
@@ -34,10 +34,11 @@
 			<div class="slides">
 
 				<section>
+<img src="geocat.png" />
 					<h1>Intro Ruimtelijke Open Data</h1>
 					<h3>(Bring Your Own Device)</h3>
 					<p>
-						<small><a href="http://geocat.net">Paul van Genuchten</a> / <a href="http://twitter.com/pvangenuchten">@pvangenuchten</a> license: CC-BY</small>
+						<small><a href="http://geocat.net">Paul van Genuchten</a> / <a href="http://twitter.com/pvangenuchten">@pvangenuchten</a> &nbsp;  license: CC-BY</small>
 					</p>
 					
 					<p>
@@ -109,16 +110,26 @@
 				
 				<section>
 					<section>
-					<h1>Open Data Community komt met alternatieven</h1> 
-					<p>Niet klagen, maar doen</p>	
-					<p>Vooral vanuit de OpenStreetMap community recent diverse agile alternatieven</p>
-						
+						<h1>Open Data Community komt met alternatieven</h1> 
+						<p>Niet klagen, maar doen</p>	
 					</section>
 					
 					<section>
 						<h1>OpenStreetMap</h1>
+						<ul>
+							<li>Volunteered data op basis van wiki</li>
+							<li>Veel gebruikt als achtergrond kaart, routering en adres-naar-punt</li>
+							<li>Inzet volunteers bij rampen</li>
+						</ul>
 					</section>
 					
+					<section>
+						<h1>NLExtract</h1>
+					</section>
+					
+					<section>
+						<h1>CitySDK</h1>
+					</section>
 					
 				</section>
 				
@@ -128,7 +139,17 @@
 					</section>
 					<section>
 						<h1>nationaalgeoregister.nl</h1>
-						data.overheid.nl
+						<img src="ngr.nl"/>
+						<ul>
+							<li class="fragment" data-fragment-index="0">Open Geo Data portaal</li>
+							<li class="fragment" data-fragment-index="1">Publicatiepunt INSPIRE richting Europa</li>
+							<li class="fragment" data-fragment-index="2">7000 datasets</li>
+							<li class="fragment" data-fragment-index="3">Ruimtelijke data bekijken, combineren, downloaden</li>
+							<li class="fragment" data-fragment-index="4">dupliceert naar data.overheid.nl</li>
+						</ul>
+						
+						
+					
 					</section>
 					<section><h1>pdok.nl</h1></section>
 					<section><h1>provinciaalgeoregister.nl</h1></section>
@@ -141,9 +162,9 @@
 					<section>
 					<h1>Inspire, opendata en Europa</h1>
 					<ul>
-					<li>Andere overheden veel data als gesloten diensten</li>
-					<li>NL, wel open, maar minimale implementatie</li></ul>	
-					<li>Verlies aan informatie, ondanks as-is verplichting</li>	
+					<li class="fragment" data-fragment-index="0">Andere overheden veel data als gesloten diensten</li>
+					<li class="fragment" data-fragment-index="1">NL, wel open, maar minimale implementatie</li></ul>	
+					<li class="fragment" data-fragment-index="2">Verlies aan informatie, ondanks as-is verplichting</li>	
 					</section>
 					
 					<section>
@@ -157,12 +178,57 @@
 				</section>
 				
 				<section>
+					<section></section>
 					<h1>Open Geo Data Downloaden</h1>
 					<ul>
-						<li>Qgis</li>
-						<li>Nationaal Georegister</li>
-						<li>GeoKettle / Talend</li>
+						<li class="fragment" data-fragment-index="0">Download (Atom)</li>
+						<li class="fragment" data-fragment-index="1">WFS (WCS/SOS)</li>
+						<li class="fragment" data-fragment-index="2">Filteren</li>
+						<li class="fragment" data-fragment-index="3">Converteren</li>
+						<li class="fragment" data-fragment-index="4">Join, Group, Union</li>
 					</ul>
+					</section>
+					<section><h1>Qgis</h1>
+						<img src="qgis.png"/>
+						<ul>
+							<li class="fragment" data-fragment-index="0">Kaarten om te printen</li>
+							<li class="fragment" data-fragment-index="1">Data bekijken vanuit NGR</li>
+							<li class="fragment" data-fragment-index="2">Data downloaden/converteren</li>
+						</ul>
+						
+					</section>
+					<section>
+						<h1>GDAL/OGR</h1>
+						<ul>
+							<li class="fragment" data-fragment-index="0">Commandline transformatie</li>
+							<li class="fragment" data-fragment-index="1">Bindings voor python, java, .net, ruby</li>
+							<li class="fragment" data-fragment-index="2"><i>ogr2ogr file.json file.gpkg -f geojson</i></li>
+						</ul>
+					</section>	
+					<section>
+						<h1>Nationaal Georegister</h1>
+						<img src="ngr-download.png"/>
+						<ul>
+							<li>Extract data uit WFS optie</li>
+							<li>Beschikbare projecties en formaten afhankelijk achterliggende WFS</li>
+						</ul>		
+							
+					</section>
+					<section>
+						<h1>stetl.org</h1>
+						<ul>
+							<li class="fragment" data-fragment-index="0">Streaming ETL (INSPIRE / Basisregistraties)</li>
+							<li class="fragment" data-fragment-index="1">Pure XSLT (& OGR & Python)</li>
+						</ul>	
+					</section>
+					<section>
+						<h1>GeoKettle / Talend / Hale</h1>
+						<img src="kettle.png"/>
+						<ul>
+							<li class="fragment" data-fragment-index="0">GUI gebaseerde ETL</li>
+								
+						</ul>
+					</section>
 				</section>
 				
 				<section>
@@ -173,16 +239,16 @@
 					<section>
 						<h1>Desktop</h1>
 						<ul>
-							<li>QGis / UDig / GVSig / Gaia / Mapwindow</li>
-							<li>Google Earth</li>
+							<li class="fragment" data-fragment-index="0">QGis / UDig / GVSig / Gaia / Mapwindow</li>
+							<li class="fragment" data-fragment-index="1">Google Earth</li>
 						</ul>
 					</section>
 					<section>
 						<h1>Web</h1>
 						<ul>
-						<li>Server: GeoServer, Mapserver, Mapnik, QGis, deegree</li>
-						<li>Client: Leaflet, OpenLayers, GGL</li>
-						<li>Cloud: CartoDB, MapBox</li>
+						<li class="fragment" data-fragment-index="0">Server: GeoServer, Mapserver, Mapnik, QGis, deegree</li>
+						<li class="fragment" data-fragment-index="1">Client: Leaflet, OpenLayers, GGL</li>
+						<li class="fragment" data-fragment-index="2">Cloud: CartoDB, MapBox</li>
 						
 						</ul>
 					</section>
@@ -268,11 +334,7 @@
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: '//cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '//cdn.jsdelivr.net/reveal.js/2.6.2/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: '//cdn.jsdelivr.net/reveal.js/2.6.2/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: '//cdn.jsdelivr.net/reveal.js/2.6.2/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '//cdn.jsdelivr.net/reveal.js/2.6.2/plugin/notes/notes.js' }
+					
 				]
 			});
 
