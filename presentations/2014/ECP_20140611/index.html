@@ -35,7 +35,7 @@
 
 		<section>
 			<img src="img/geocat.png" style="border:none;width:20%" />
-			<h1>Intro Ruimtelijke Open Data</h1>
+			<h1>Ruimtelijke Open Data</h1>
 			<h4>(Bring Your Own Device)</h4>
 			<p>
 				<small><a href="http://geocat.net">Paul van Genuchten</a> / <a href="http://twitter.com/pvangenuchten">@pvangenuchten</a> &nbsp;  license: CC-BY</small>
@@ -53,168 +53,156 @@
 	
          
 		<section>
-		
+				
+			<section>
+				<h1>wij ~ zij?</h1>
+			</section>			
+			
+			<section>
+				<h6><img src="img/mapping.jpg" style="border:none;width:100%"/><br/>
+				&copy; @elisabethirg</h6>	
+			</section>
+			
+			<section>
+				<h1>Wederzijdse onbekendheid?</h1>
+			</section>
+				
+			<section>
+				<h1>Programma</h1>
+				<ul>
+					<li>Achtergrond mismatch</li>
+					<li>OGC API's</li>
+					<li>Open data portalen</li>
+					<li>Open data downloaden</li>
+					<li>Open data visualiseren</li>
+					<li>INSPIRE</li>
+					<li>Vingeroefening</li>
+				</ul>
+			</section>			
+				
+		</section>		
+		<section>		
+				
 				<section>
-					<h1>Geo Standaarden Complex?</h1>
-					<p>Geo standaarden worden buiten <i>(en binnen)</i> het werkveld als complex ervaren...</p>
-					<img src="standardsAreComplex.jpg"/>
-				</section>
-				<section>
-					<h2>En dat is misschien ook wel zo...</h2>
+					<h1>Achtergrond mismatch</h1>
 					<ul>
 						<li class="fragment" data-fragment-index="0">Materie is vrij complex (projecties, xml-encodings)</li>
 						<li class="fragment" data-fragment-index="1">Data providers publiceren de data met een eigen (geo) bril</li>
-						<li class="fragment" data-fragment-index="2">Vertraagde implementatie in gangbare software</li>
-						<li class="fragment" data-fragment-index="3">Interpretatieverschillen</li>
-						<li class="fragment" data-fragment-index="4">Grote bestanden</li>
-						<li class="fragment" data-fragment-index="5">Academische inslag</li>
+						<li class="fragment" data-fragment-index="2">Interpretatieverschillen</li>
+						<li class="fragment" data-fragment-index="3">Grote bestanden</li>
+						<li class="fragment" data-fragment-index="4">Academische inslag</li>
 					</ul>	
 				</section>
 				
-				
+				<section>
+					<!-- voorbeeld slechte open data brp gewaspercelen -->
+					<!-- ook goed voorbeeld, RCE -->
+				</section>
 				
 				<section>
-					<h1>Hoe gaan we dat oplossen?</h1>
+					<h1>Samenwerking optimaliseren</h1>
 					<ul>
-						<li class="fragment" data-fragment-index="0">Providers stimuleren data beter te presenteren (eenvoudige formaten)</li>
+						<li class="fragment" data-fragment-index="0">Providers stimuleren data beter te presenteren</li>
 						<li class="fragment" data-fragment-index="1">Data portalen meer opties geven om data te extraheren</li>
-						<li class="fragment" data-fragment-index="3">Marktpartijen bieden vereenvoudigde diensten aan op Open Data </li>
-						<li class="fragment" data-fragment-index="2">Betere documentatie / onderwijs</li>
+						<li class="fragment" data-fragment-index="2">Partijen bieden diensten aan op Open Data (CitySDK, ArcGIS Online, OpenGeo.nl)</li>
+						<li class="fragment" data-fragment-index="2">Nlextract.nl helpt met adviezen en tools</li>
+						<li class="fragment" data-fragment-index="3">Betere documentatie / onderwijs / samenwerking</li>
 					</ul>
 				</section>
-	
+				
+				
+				
 		</section>
 		
 		<section>
 			<section>
 				<h1>De OGC API(s)</h1>
 				<p>Open Geospatial Consortium (opengeospatial.org)</p>
-				<h6><img src="img/ogc.png" style="border:none"/><br/>
-				Copyright © 2014 Open Geospatial Consortium</h6>
+				<h6><img src="img/ogc.png" style="border:none;width:40%"/><br/>
+				<small>&copy; 2014 Open Geospatial Consortium</small></h6>
 			</section>
+			
+			<section>
+			
+				<h1>Algemeen in OGC api's</h1>
+				<ul>
+					<li>XML georienteerd</li>
+					<li>Initiele "getcapabilities" operatie</li>
+					<li>Compliance tests op cite.opengeospatial.org en geonovum.nl</li>
+				<ul>
+			
+			</section>
+			
 			<section>
 				<h1>WMS</h1>
-				<ul>
-					<li class="fragment" data-fragment-index="0"></li>
-				</ul>
+				<img src="img/map.png" style="border:none;float:right">
+				<ul><i>
+				{wms}?service=wms&version=1.1.1<br/>
+				&request=getmap<br/>
+				&layers=gemaal<br/>
+				&bbox=400000,100000,500000,200000<br/>
+				&srs=epsg:28992<br/>
+				&width=100&height=100<br/>
+				&format=image/png<br/>
+				</i></ul>
 			</section>
 			<section>
 				<h1>WMTS</h1>
-				<ul>
-					<li class="fragment" data-fragment-index="0"></li>
-				</ul>
+				<img src="img/Tiling.png" style="border:none;">
+				<h6>@ idgis.eu</h6>
 			</section>
 			<section>
 				<h1>WFS</h1>
-				<ul>
-					<li class="fragment" data-fragment-index="0"></li>
-				</ul>
-			</section>
-			<section>
-				<h1>WCS</h1>
-				<ul>
-					<li class="fragment" data-fragment-index="0"></li>
-				</ul>
-			</section>
-			<section>
-				<h1>CSW</h1>
-				<ul>
-					<li class="fragment" data-fragment-index="0"></li>
-				</ul>
+				<img src="img/json.png" style="border:none;float:right;width:40%">
+				<ul><i>
+				{wfs}?service=wfs&version=1.1.0<br/>
+				&request=GetFeature<br/>
+				&typeName=gemaal<br/>
+				&outputFormat=json<br/>
+				&srsName=EPSG:4326<br/>
+				</i></ul>
 			</section>
 			<section>
 				<h1>WPS</h1>
+				<br/><br/>
 				<ul>
-					<li class="fragment" data-fragment-index="0"></li>
-				</ul>
+				<li>GetCapabilities</li>
+				<li>DescribeProcess</li>
+				<li>Execute</li>
+				</ul>	
 			</section>
 			<section>
 				<h1>SOS</h1>
-				<ul>
-					<li class="fragment" data-fragment-index="0"></li>
-				</ul>
+				<img src="img/SensorWeb.JPG" style="border:none;width:80%">
 			</section>
 			<section>
 				<h1>GeoSparql</h1>
-				<ul>
-					<li class="fragment" data-fragment-index="0"></li>
-				</ul>
+				<img src="img/GeometryLGDStyle.jpg" style="border:none;width:80%"><br/>
+				&copy; muninn-project.org</h6>
 			</section>
 			<section>
 				<h1>Encodings voor ruimtelijke data</h1>
+				<br/><br/>
 				<ul>
-					<li class="fragment" data-fragment-index="0">GML / KML / WKT / O&M / GeoJSON</li>
-				</ul>
-			</section>
-			<section>
-				<h1>WMC / OWS_Context</h1>
-				<ul>
-					<li class="fragment" data-fragment-index="0"></li>
-				</ul>
-			</section>
-			<section>
-				<h1></h1>
-				<ul>
-					<li class="fragment" data-fragment-index="0"></li>
+					<li class="fragment" data-fragment-index="0">GML</li>
+					<li class="fragment" data-fragment-index="1">KML</li>
+					<li class="fragment" data-fragment-index="2">O&M<br/><br/></li>
+					<li class="fragment" data-fragment-index="3">GeoJSON</li>
 				</ul>
 			</section>
 			
 		</section>
 		
-		<section>			
-	
-					<section>
-						<h2>Open Data Community komt met alternatieven</h2> 
-						<h1>aka NeoGeography</h1>
-						<img src="img/mapping.jpg"/>
-						<h6>Source Twitter:@elisabethivg</h6>	
-						
-					</section>
-					
-					<section>
-						<h1>OpenStreetMap</h1>
-						<ul>
-							<li>Volunteered data op basis van wiki-principes</li>
-							<li>Veel gebruikt als achtergrond kaart, routering en adres-naar-punt</li>
-							<li>Inzet volunteers bij rampen</li>
-						</ul>
-					</section>
-					
-					<section>
-						<h1>Geojson.org</h1>
-						<ul>
-							<li>Community standards</li>
-							<li>geojson, topojson, cartoCSS, tilejson, datapackage.json</li>
-						</ul>
-					</section>
-					
-					<section>
-						<h1>NLExtract</h1>
-						
-					</section>
-					
-					<section>
-						<h1>CitySDK</h1>
-						
-					</section>
 
-					<section>
-						<h1>JSON-LD</h1>
-						
-					</section>
-					
-		</section>
 		
 		<section>
 					<section>
-						<h1>Open Geo Data Vinden</h1>
+						<h1>Op zoek naar ruimtelijke open data</h1>
 					</section>
-					
+					<br/><br/>
 					<section>
-						<h1>nationaalgeoregister.nl</h1>
-						<img src="ngr.nl"/>
+						<h1>NationaalGeoregister.nl</h1>
 						<ul>
-							<li class="fragment" data-fragment-index="0">Open Geo Data portaal</li>
 							<li class="fragment" data-fragment-index="1">Publicatiepunt INSPIRE richting Europa</li>
 							<li class="fragment" data-fragment-index="2">7000 datasets</li>
 							<li class="fragment" data-fragment-index="3">Ruimtelijke data bekijken, combineren, downloaden</li>
@@ -223,39 +211,67 @@
 					</section>
 					
 					<section>
-						<h1>provinciaalgeoregister.nl</h1>
-							
+						<img src="img/ngr.png" style="width:100%;border:none"/>
 					</section>
 					
 					<section>
-						<h1>pdok.nl</h1>
-							
+						<h1>PDOK.nl</h1>
+						<br/><br/>
+						<ul>
+							<li class="fragment" data-fragment-index="0">Data knooppunt van Kadaster, KvK, CBS  en een deel van RWS en EZ</li>
+							<li class="fragment" data-fragment-index="1">Naast hosting ook aandacht voor ontsluiting</li>
+						</ul>	
+					</section>
+					
+					<section>
+						<img src="img/pdok.png" style="width:100%;border:none"/>
+					</section>
+					
+					<section>
+						<h1>Provinciaalgeoregister.nl</h1>
+						<br/><br/>
+						<ul>
+							<li class="fragment" data-fragment-index="0">Data knooppunt van provincie data</li>
+							<li class="fragment" data-fragment-index="1">Ontwikkeld door Bij12, B3Partners en IDGis</li>
+						</ul>
+					</section>
+				
+					<section>
+						<h1>Overige knooppunten</h1>
+						<br/><br/>
+						<ul>
+							<li class="fragment" data-fragment-index="0">RIVM</li>
+							<li class="fragment" data-fragment-index="1">TNO</li>
+							<li class="fragment" data-fragment-index="2">KNMI</li>
+							<li class="fragment" data-fragment-index="3">Waterschappen, RDW, RCE (Nieuwland+GeoCat)</li>
+							<li class="fragment" data-fragment-index="4">RVO (B3Partners)</li>
+							<li class="fragment" data-fragment-index="5">Hydrografische dienst (Caris)</li>
+						</ul>
 					</section>
 					
 		</section>			
 		<section>
-					
+		
 					<section>
-						<h1>Open Data Explosie</h1>
-						<ul>
-							<li>Veel open geo data afgelopen jaren</li>
-							<li>Enerzijds beleid regering</li>
-							<li>Anderzijds door Europese INSPIRE regelgeving</li>
-						</ul>
+						<h1>INSPIRE</h1>
+						<br/>
+						<img src="img/inspire.png" style="width:30%;border:none"/><br/>
+						<h2>Kwaliteitskeurmerk voor ruimtelijke open data</h2>
 					</section>
 					
 					<section>
 						<h1>INSPIRE, Open Data en Europa</h1>
+						<br/><br/>
 						<ul>
 							<li class="fragment" data-fragment-index="0">NL voorop met Open Data in INSPIRE context</li>
 							<li class="fragment" data-fragment-index="1">NL kiest voor minimale implementatie</li>	
 							<li class="fragment" data-fragment-index="2">Soms door Open Data juist minder informatie</li>
-						
 						</ul>
 					</section>
 					
 					<section>
-						<h1>INSPIRE als keurmerk voor Open Geo Data</h1>
+						<h1>Keurmerk voor Open Data</h1>
+						<br/><br/>
 						<ul>
 							<li class="fragment" data-fragment-index="0">Aanmerkingsproces</li>
 							<li class="fragment" data-fragment-index="1">Quality of services</li>
@@ -266,9 +282,9 @@
 				<section>
 					<h1>Data specificaties</h1>
 					<img src="specs.png"/>
-					
 				</section>
 
+				<!--
 				<section>
 					<h1>Aangemerkte data providers</h1>
 					<ul>
@@ -285,34 +301,32 @@
 					</ul>
 					
 				</section>
-				
+				-->
 		</section>
 		
 		<section>
 					<section>
 						<h1>Open Geo Data Downloaden</h1>
-						<ul>
-							<li class="fragment" data-fragment-index="0">Download (Atom)</li>
-							<li class="fragment" data-fragment-index="1">WFS (WCS/SOS)</li>
-							<li class="fragment" data-fragment-index="2">Filteren</li>
-							<li class="fragment" data-fragment-index="3">Converteren</li>
-							<li class="fragment" data-fragment-index="4">Join, Group, Union</li>
-						</ul>
 					</section>
 					
 					<section>
 						<h1>Qgis</h1>
-						<img src="qgis.png"/>
+						<br/><br/>
 						<ul>
-							<li class="fragment" data-fragment-index="0">Kaarten om te printen</li>
-							<li class="fragment" data-fragment-index="1">Data bekijken vanuit NGR</li>
+							<li class="fragment" data-fragment-index="0">Desktop pakket voor maken (en printen) van kaarten</li>
+							<li class="fragment" data-fragment-index="1">Data zoeken in NGR</li>
 							<li class="fragment" data-fragment-index="2">Data downloaden/converteren</li>
 						</ul>
-						
 					</section>
-					
+					<section>
+						<img src="img/qgis-search.png" style="width:60%;border:none;"/>
+					</section>
+					<section>
+						<img src="img/qgis-download.png" style="width:100%;border:none;"/>
+					</section>
 					<section>
 						<h1>GDAL/OGR</h1>
+						<br/><br/>
 						<ul>
 							<li class="fragment" data-fragment-index="0">Commandline transformatie</li>
 							<li class="fragment" data-fragment-index="1">Bindings voor python, java, .net, ruby</li>
@@ -322,16 +336,21 @@
 					
 					<section>
 						<h1>Nationaal Georegister</h1>
-						<img src="ngr-download.png"/>
+						<br/><br/>
 						<ul>
-							<li>Extract data uit WFS optie</li>
+							<li>Extraheer data uit WFS gereedschap</li>
 							<li>Beschikbare projecties en formaten afhankelijk achterliggende WFS</li>
 						</ul>		
-							
 					</section>
 					
 					<section>
+						<img src="img/ngr-download.png" style="width:100%;border:none;" />
+					</section>
+					
+					
+					<section>
 						<h1>stetl.org</h1>
+						<br/><br/>
 						<ul>
 							<li class="fragment" data-fragment-index="0">Streaming ETL (INSPIRE / Basisregistraties)</li>
 							<li class="fragment" data-fragment-index="1">Pure XSLT (& OGR & Python)</li>
@@ -340,22 +359,26 @@
 					
 					<section>
 						<h1>GeoKettle / Talend / Hale</h1>
-						<img src="kettle.png"/>
+						<br/><br/>
 						<ul>
 							<li class="fragment" data-fragment-index="0">GUI gebaseerde ETL</li>
-								
 						</ul>
 					</section>
+					
+					<section>
+						<img src="img/talend.png" style="width:100%;border:none;"/>
+					</section>
+					
 		</section>
 		
 		<section>
 					<section>
 						<h1>Open Geo Data Visualiseren</h1>
-						<img src="map.png"/>
 					</section>
 					
 					<section>
 						<h1>Desktop</h1>
+						<br/><br/>
 						<ul>
 							<li class="fragment" data-fragment-index="0">QGis / UDig / GVSig / Gaia / Mapwindow</li>
 							<li class="fragment" data-fragment-index="1">Google Earth</li>
@@ -363,64 +386,70 @@
 					</section>
 					
 					<section>
+						<img src="img/qgis.png" style="border:none"/>
+					</section>
+					
+					<section>
 						<h1>Web</h1>
+						<br/><br/>
 						<ul>
 						<li class="fragment" data-fragment-index="0">Server: GeoServer, Mapserver, Mapnik, QGis, deegree</li>
 						<li class="fragment" data-fragment-index="1">Client: Leaflet, OpenLayers, GGL</li>
 						<li class="fragment" data-fragment-index="2">Cloud: CartoDB, MapBox</li>
-						
 						</ul>
 					</section>
 					
 					<section>
-						<h1>CortoDB</h1>
-						<iframe width='800' height='520' frameborder='0' src='//geocat.cartodb.com/viz/d41ea7de-e3d1-11e3-8680-0edbca4b5057/embed_map?title=true&description=true&search=true&shareable=true&cartodb_logo=true&layer_selector=false&legends=false&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=&sw_lat=52.34823887917791&sw_lon=4.800338745117187&ne_lat=52.39016345605323&ne_lon=4.95758056640625' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-						
+						<iframe width='800' height='650' frameborder='0' src='//geocat.cartodb.com/viz/d41ea7de-e3d1-11e3-8680-0edbca4b5057/embed_map?title=true&description=true&search=true&shareable=true&cartodb_logo=true&layer_selector=false&legends=false&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=&sw_lat=52.34823887917791&sw_lon=4.800338745117187&ne_lat=52.39016345605323&ne_lon=4.95758056640625' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 					</section>
 					
 		</section>
 				
-                <section>
+        <section>
+				
+				<section>
+					<h1>Vingeroefening</h1>
+				</section>
 				
 				<section>
 					<h4>Leaflet vingeroefening deel 1</h4>
 					<h2>Een kaart in een webpagina in 2 lines of code</h2>
-					<iframe src=leaflet/leaf_s1.htm class="mapframe"></iframe>
+					<iframe src=http://ecp.genuchten.net/leaf_s1.htm class="mapframe"></iframe>
 					<h5><a href="https://github.com/pvgenuchten/pvgenuchten.github.io/tree/master/presentations/2014/ECP_20140611/leaflet/leaf_s1.htm" target=_top>Bekijk code</a></h5>
 				</section>
 				
 				<section>
 				<h4>Leaflet vingeroefening deel 2</h4>
 				<h2>Een WMS laag uit NGR toevoegen</h2>
-				<iframe src=leaflet/leaf_s2.htm class="mapframe"></iframe>
+				<iframe src=http://ecp.genuchten.net/leaf_s2.htm class="mapframe"></iframe>
 				<h5><a href="https://github.com/pvgenuchten/pvgenuchten.github.io/tree/master/presentations/2014/ECP_20140611/leaflet/leaf_s2.htm" target=_top>Bekijk code</a></h5>
 				</section>
 				
 				<section>
 				<h4>Leaflet vingeroefening deel 3</h4>
 				<h2>Featureinfo op een WMS laag</h2>
-				<iframe src=leaflet/leaf_s3.htm class="mapframe"></iframe>
+				<iframe src=http://ecp.genuchten.net/leaf_s3.htm class="mapframe"></iframe>
 				<h5><a href="https://github.com/pvgenuchten/pvgenuchten.github.io/tree/master/presentations/2014/ECP_20140611/leaflet/leaf_s3.htm" target=_top>Bekijk code</a></h5>
 				</section>
 				
 				<section>
 				<h4>Leaflet vingeroefening deel 4</h4>
 				<h2>Een achtergrond uit PDOK (BRT)</h2>
-				<iframe src=leaflet/leaf_s4.htm class="mapframe"></iframe>
+				<iframe src=http://ecp.genuchten.net/leaf_s4.htm class="mapframe"></iframe>
 				<h5><a href="https://github.com/pvgenuchten/pvgenuchten.github.io/tree/master/presentations/2014/ECP_20140611/leaflet/leaf_s4.htm" target=_top>Bekijk code</a></h5>
 				</section>
 				
 				<section>
 				<h4>Leaflet vingeroefening deel 5</h4>
 				<h2>Een vector weergave op basis van WFS</h2>
-				<iframe src=leaflet/leaf_s5.htm class="mapframe"></iframe>
+				<iframe src=http://ecp.genuchten.net/leaf_s5.htm class="mapframe"></iframe>
 				<h5><a href="https://github.com/pvgenuchten/pvgenuchten.github.io/tree/master/presentations/2014/ECP_20140611/leaflet/leaf_s5.htm" target=_top>Bekijk code</a></h5>
 				</section>
 				
 				<section>
 				<h4>Leaflet vingeroefening deel 6</h4>
 				<h2>Vectoren geclusterd</h2>
-				<iframe src=leaflet/leaf_s6.htm class="mapframe"></iframe>
+				<iframe src=http://ecp.genuchten.net/leaf_s6.htm class="mapframe"></iframe>
 				<h5><a href="https://github.com/pvgenuchten/pvgenuchten.github.io/tree/master/presentations/2014/ECP_20140611/leaflet/leaf_s6.htm" target=_top>Bekijk code</a></h5>
 				</section>
                    
