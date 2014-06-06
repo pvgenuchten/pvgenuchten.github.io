@@ -11,15 +11,16 @@
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.6.2/css/theme/serif.css" id="theme">
 		
         <link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.6.2/lib/css/zenburn.css">
-		
-		<!-- Include the appropriate print stylesheet 
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? '//cdn.jsdelivr.net/reveal.js/2.6.2/css/print/pdf.css' : '//cdn.jsdelivr.net/reveal.js/2.6.2/css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>-->
+		<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.6.2/css/print/pdf.css"> -->
+		<style>
+			.reveal h1, .reveal h2 {
+				font-family: "Myriad Pro", "Open Sans", "Book Antiqua", Palatino, FreeSerif, serif;
+			}
+			
+			.reveal p, .reveal li, .reveal a, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+				font-family: "Open Sans", "Book Antiqua", Palatino, FreeSerif, serif;
+			}			
+		</style>
 		
 		<!--[if lt IE 9]>
 		<script src="//cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/html5shiv.js"></script>
@@ -61,7 +62,7 @@
 			</section>			
 			
 			<section>
-				<h6><img src="img/mapping.jpg" style="border:none;width:100%"/><br/>
+				<h6><img src="img/mapping.jpg" style="border:none;width:90%"/><br/>
 				&copy; @elisabethirg</h6>	
 			</section>
 			
@@ -81,9 +82,7 @@
 					<li>Vingeroefening</li>
 				</ul>
 			</section>			
-				
-		</section>		
-		<section>		
+						
 				
 				<section>
 					<h1>Achtergrond mismatch</h1>
@@ -144,8 +143,8 @@
 				<ul><i>
 				{wms}?service=wms&version=1.1.1<br/>
 				&request=getmap<br/>
-				&layers=gemaal<br/>
-				&bbox=400000,100000,500000,200000<br/>
+				&layers=archeologie<br/>
+				&bbox=0,400000,100000,500000<br/>
 				&srs=epsg:28992<br/>
 				&width=100&height=100<br/>
 				&format=image/png<br/>
@@ -153,6 +152,9 @@
 			</section>
 			<section>
 				<h1>WMTS</h1>
+				<br/>
+				<h3>Als WMS, echter volgens vast grid (getegeld)</h3>
+				<br/>
 				<img src="img/Tiling.png" style="border:none;">
 				<h6>@ idgis.eu</h6>
 			</section>
@@ -171,7 +173,7 @@
 				<h1>CSW</h1>
 				<br/><br/>
 				<ul>
-				<li>API on een catalogus te bevragen</li>
+				<li>API om een catalogus te bevragen</li>
 				<li>GetCapabilities</li>
 				<li>getRecords</li>
 				<li>getRecordbyId</li>
@@ -212,39 +214,38 @@
 		
 		<section>
 		
-					<section>
-						<h1>INSPIRE</h1>
-						<br/>
-						<img src="img/INSPIRE.jpg" style="width:30%;border:none"/><br/>
-						<h2>Kwaliteitskeurmerk voor ruimtelijke open data</h2>
-					</section>
-					
-					<section>
-						<h1>INSPIRE, Open Data en Europa</h1>
-						<br/><br/>
-						<ul>
-							<li class="fragment" data-fragment-index="0">NL voorop met Open Data in INSPIRE context</li>
-							<li class="fragment" data-fragment-index="1">NL kiest voor minimale implementatie</li>	
-							<li class="fragment" data-fragment-index="2">Soms door Open Data juist minder informatie</li>
-						</ul>
-					</section>
-					
-					<section>
-						<h1>Keurmerk voor Open Data</h1>
-						<br/><br/>
-						<ul>
-							<li class="fragment" data-fragment-index="0">Aanmerkingsproces</li>
-							<li class="fragment" data-fragment-index="1">Quality of services</li>
-							<li class="fragment" data-fragment-index="2">Harmonisatie</li>
-						</ul>
-					</section>
+				<section>
+					<h1>INSPIRE</h1>
+					<br/>
+					<img src="img/INSPIRE.jpg" style="width:30%;border:none"/><br/>
+					<h2>Kwaliteitskeurmerk voor ruimtelijke open data</h2>
+				</section>
+				
+				<section>
+					<h1>INSPIRE, Open Data en Europa</h1>
+					<br/><br/>
+					<ul>
+						<li class="fragment" data-fragment-index="0">NL voorop met Open Data in INSPIRE context</li>
+						<li class="fragment" data-fragment-index="1">NL kiest voor minimale implementatie</li>	
+						<li class="fragment" data-fragment-index="2">Soms door Open Data juist minder informatie</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h1>Keurmerk voor Open Data</h1>
+					<br/><br/>
+					<ul>
+						<li class="fragment" data-fragment-index="0">Aanmerkingsproces</li>
+						<li class="fragment" data-fragment-index="1">Quality of services</li>
+						<li class="fragment" data-fragment-index="2">Harmonisatie</li>
+					</ul>
+				</section>
 				
 				<section>
 					<h1>Data specs</h1>
 					<br/>
 					<img src="img/specs.jpg" style="width:70%;border:none"/>
 				</section>
-
 			
 				<section>
 					<h1>INSPIRE data providers</h1>
@@ -271,7 +272,7 @@
 					</section>
 				
 					<section>
-						<h1>NationaalGeoregister.nl</h1>
+						<h1>Nationaal<br/>Georegister.nl</h1>
 						<br/><br/>
 						<ul>
 							<li class="fragment" data-fragment-index="1">Publicatiepunt INSPIRE richting Europa</li>
@@ -308,15 +309,15 @@
 					</section>
 					
 					<section>
-						<img src="img/pdok.jpg" style="width:100%;border:none"/><br/>
+						<img src="img/pdok.jpg" style="width:80%;border:none"/><br/>
 					</section>
 					
 					<section>
-						<h1>Provinciaalgeoregister.nl</h1>
+						<h1>Provinciaal<br/>georegister.nl</h1>
 						<br/><br/>
 						<ul>
-							<li class="fragment" data-fragment-index="0">Data knooppunt van provincie data</li>
-							<li class="fragment" data-fragment-index="1">Ontwikkeld door Bij12, B3Partners en IDGis</li>
+							<li>Data knooppunt van provincie data</li>
+
 						</ul>
 					</section>
 				
@@ -329,9 +330,9 @@
 						<br/><br/>
 						<ul>
 							<li class="fragment" data-fragment-index="0">RIVM, TNO, KNMI</li>
-							<li class="fragment" data-fragment-index="3">Waterschappen, RDW, RCE (Nieuwland+GeoCat)</li>
-							<li class="fragment" data-fragment-index="4">RVO (B3Partners)</li>
-							<li class="fragment" data-fragment-index="5">Hydrografische dienst (Caris)</li>
+							<li class="fragment" data-fragment-index="3">Waterschappen, RDW, RCE</li>
+							<li class="fragment" data-fragment-index="4">RVO</li>
+							<li class="fragment" data-fragment-index="5">Hydrografische dienst</li>
 						</ul>
 					</section>
 					
